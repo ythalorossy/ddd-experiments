@@ -1,0 +1,18 @@
+Creating docker image
+
+Moving dependencies
+$ mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
+
+Bulding image
+$ docker build -t ythalorossy/order:1.0.0 .
+
+----
+
+Creating image with Jib Tool
+https://github.com/GoogleContainerTools/jib
+
+build docker image
+$ ./mvnw com.google.cloud.tools:jib-maven-plugin:dockerBuild -Dimage=ythalorossy/order:1.0.0
+
+push docker image
+$ ./mvnw com.google.cloud.tools:jib-maven-plugin:build -Dimage=ythalorossy/order:1.0.0

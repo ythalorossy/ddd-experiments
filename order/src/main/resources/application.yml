@@ -1,0 +1,25 @@
+# server:
+#   port: 8100
+
+
+spring:
+  application:
+    name: order
+  
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL} 
+    username: ${SPRING_DATASOURCE_USERNAME} 
+    password: ${SPRING_DATASOURCE_PASSWORD} 
+    # url: jdbc:mysql://mysql:3306/restaurant?createDatabaseIfNotExist=true
+    # username: root
+    # password: my-secret-pw
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  rabbitmq:
+    host: rabbitmq
+    username: guest
+    password: guest
