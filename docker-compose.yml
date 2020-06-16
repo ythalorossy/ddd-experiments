@@ -14,27 +14,27 @@ services:
     networks:
       - restaurant
 
-  payment:
-    image: ythalorossy/payment:1.0.0
-    container_name: payment
-    hostname: payment
-    ports:
-      - "8200:8080"
-    networks:
-      - restaurant
-    depends_on:
-      - order
+  # payment:
+  #   image: ythalorossy/payment:1.0.0
+  #   container_name: payment
+  #   hostname: payment
+  #   ports:
+  #     - "8200:8080"
+  #   networks:
+  #     - restaurant
+  #   depends_on:
+  #     - order
 
-  restaurant:
-    image: ythalorossy/restaurant:1.0.0
-    container_name: restaurant
-    hostname: restaurant
-    ports:
-      - "8300:8080"
-    networks:
-      - restaurant
-    depends_on:
-      - payment
+  # restaurant:
+  #   image: ythalorossy/restaurant:1.0.0
+  #   container_name: restaurant
+  #   hostname: restaurant
+  #   ports:
+  #     - "8300:8080"
+  #   networks:
+  #     - restaurant
+  #   depends_on:
+  #     - payment
 
 networks:
   restaurant:
